@@ -25,7 +25,7 @@ app.get('/cms/demo', async (req, res) => {
     } else if (num > 0.5) {
       res.status(500).send(new Error('Failed randomly'));
     } else {
-      res.send({data: `<h1>Random Quote</h1><p><em>Time: ${time}</em></p><blockquote>${randomMessage}</blockquote>`});
+      res.send({data: `<h2>Random Quote</h2><p><em>Time: ${time}</em></p><blockquote>${randomMessage}</blockquote>`});
     }
   }, 1000);
 });

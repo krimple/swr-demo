@@ -8,9 +8,8 @@ export default function Content() {
       </div>
       { !isValidating && error && <div>Error: {error}</div> }
       { isValidating && <div>loading...</div> }
-      { !isValidating && !error && data && <div dangerouslySetInnerHTML={{__html: data.data}} /> }
+      { !isValidating && !error && data && <><h3>Retrieved Data</h3><div dangerouslySetInnerHTML={{__html: data.data}} /></> }
+      { isValidating && !error && data && <><h3>Cached data...</h3><div dangerouslySetInnerHTML={{__html: data.data}} /></> }
     </>
   );
-
-  return <p>loading...</p>;
 }
